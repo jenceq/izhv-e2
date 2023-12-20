@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
     /// <summary>
     /// Mean frequency of spawning as n per second.
     /// </summary>
-    public float spawnFrequencyMean = 1.0f;
+    public float spawnFrequencyMean = 1.5f;
     
     /// <summary>
     /// Standard deviation of the frequency of spawning as n per second.
@@ -91,7 +91,7 @@ public class Spawner : MonoBehaviour
         var spawnDown = RandomBool();
         obstacle.transform.position += (Vector3)(spawnDown ? 
             spawnOffset + (1.0f - spawnSize) / 2.0f : 
-            -spawnOffset - (1.0f - spawnSize) / 2.0f
+            -spawnOffset - (1.7f - spawnSize) / 2.0f
         );
         
         // Scale it.
